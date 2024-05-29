@@ -3,12 +3,54 @@
 // Use your list to print a series of statements about these items, such as “I would like to own a Honda motorcycle.”
 
 
-let  transportationMode : string[] =["Lamborighni","BMW","Ferrarri","Audi","Land Cruiser","Buggati"]
-transportationMode.map((items)=> console.log(`I would like to own a ${items} `))
+let  transportationMode : string[] =["Lamborghini","BMW","Ferrari","Audi","Land Cruiser","Bugatti"]
+transportationMode.map((items) => console.log(`I would like to own a ${items} `))
 console.log("*******************************************");
+
+// Map method => This method creates a new array from calling a function for every array element.
+//Yahan map aik callback function ko call karta hai jo item ke naam se har array ke item ko represent karta hai.
 
 //method 2
 transportationMode.forEach(transport => {
     console.log(`I would like to own a ${transport}.`);
+});
+console.log("*******************************************");
+
+
+// *Question 14:* Guest List: If you could invite anyone, living or deceased, to dinner, who would you invite?
+// Make a list that includes at least three people you’d like to invite to dinner. 
+//Then use your list to print a message to each person, inviting them to dinner.
+
+let guestList : string[] = ["Fiza","Nazia","Maheen","Nimra","Anaya","Anabya"]
+guestList.forEach(guests =>{
+               console.log(`Hello ${guests}, You are inviting to dinner.`);          
+})
+console.log("*******************************************");
+
+//*Question 15:* Changing Guest List: One of your guests can't make it to the dinner, 
+//so you need to send out a new set of invitations with a replacement guest.
+
+
+//Method 1
+let changeGuest = guestList.splice(4,1,"Shiza")
+console.log(`Hey ${changeGuest}, You are not inviting to dinner.`);
+
+guestList.forEach(guests =>{
+    console.log(`Hello ${guests}, You are inviting to dinner.`);          
+})
+console.log("*******************************************");
+
+//Method 2
+
+let unableToAttend = "Anaya";
+console.log(`${unableToAttend} can't make it to dinner.`);
+
+// Replace the guest
+let newGuest = "Shiza";
+guestList[guestList.indexOf(unableToAttend)] = newGuest;
+
+// New invitations
+guestList.forEach(guest => {
+    console.log(`Dear ${guest}, would you like to join me for dinner?`);
 });
 console.log("*******************************************");
