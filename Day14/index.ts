@@ -20,18 +20,26 @@ function Album(artist : string , title : string , tracks? : number ){
 
 let magician = ["Alice","David","Chris"]
 
-function Magicians(){
+function Magicians(magician : string[]){
     magician.forEach(magicians => console.log(magicians))
 }
-Magicians()
+Magicians(magician)
 
 console.log("\n********************************************\n");
 
 //*Question 42:* Great Magicians: Add "the Great" to magician names.
 
-function Great_Magicians(){
-    magician.forEach(magicians => console.log(`The Great ${magicians}`))
+function greatMagicians( magicians : string[]){
+  for(let i = 0 ; i < magicians.length ; i++ ){
+     magicians[i] =  "The Great " + magicians[i]  ;
+  }
+
 }
-Great_Magicians()
+
+greatMagicians(magician)
+
+
+Magicians(magician)
+
 
 console.log("\n********************************************\n");
