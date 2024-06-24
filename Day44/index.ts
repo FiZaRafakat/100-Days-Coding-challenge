@@ -8,7 +8,7 @@ console.log(add(5, 90));
 
 import { Person } from "./person";
 
-const name = new Person("Fiza")
+const name = new Person("FIZA")
 
 console.log(name);
 
